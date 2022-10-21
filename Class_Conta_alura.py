@@ -28,10 +28,7 @@ class Conta:
             destino.deposita(valor)
             return True
 
-contas = {
-
-}
-
+contas = {}
 
 
 print("<--- Inicializando Sistema --->\n   <---- Criando Conta ---->\n")
@@ -39,26 +36,32 @@ print("<--- Inicializando Sistema --->\n   <---- Criando Conta ---->\n")
 while(True):
     checaOpcao = int(input("Que tipo de conta deseja criar?\n 1 - Conta Corrente \n 2 - Conta Poupança \n\n"))
     if(checaOpcao == 1):
-        -
+        contaCriada = Conta("Conta Corrente", int(input("digite o numero da conta: ")), input("digite o titular da conta: "), int(input("digite o saldo: ")), limite=50000)
+        contas.update(contaCriada)
+        break
+
+print(type(contaCriada))
+
+print(contas.keys())
         
-    elif(checaOpcao == 2):
+#     elif(checaOpcao == 2):
         
 
-conta1 = Conta((int(input("numero da conta: "))), input("titular da conta: "), int(input("saldo: ")), limite=5000)
+# conta1 = Conta((int(input("numero da conta: "))), input("titular da conta: "), int(input("saldo: ")), limite=5000)
 
 
-while(True):
-    checaOperacao = int(input("Qual operação deseja realizar?\n 1 - Depositar \n 2 - Sacar \n 3 - transferir \n\n"))
-    if(checaOperacao == 1):
-        conta1.deposita(int(input("Quanto deseja depositar? \n")))
-        break
-    elif(checaOperacao == 2):
-        conta1.saca(int(input("Quanto deseja sacar? \n")))
-        break
-    elif(checaOperacao == 3):
-        conta2 = Conta((int(input("numero da conta: "))), input("titular da conta: "), int(input("qual o saldo da conta: ")), limite=5000)
-        conta1.transfere_para(conta2, int(input("Quanto deseja transferir? \n")))
-        break
+# while(True):
+#     checaOperacao = int(input("Qual operação deseja realizar?\n 1 - Depositar \n 2 - Sacar \n 3 - transferir \n\n"))
+#     if(checaOperacao == 1):
+#         conta1.deposita(int(input("Quanto deseja depositar? \n")))
+#         break
+#     elif(checaOperacao == 2):
+#         conta1.saca(int(input("Quanto deseja sacar? \n")))
+#         break
+#     elif(checaOperacao == 3):
+#         conta2 = Conta((int(input("numero da conta: "))), input("titular da conta: "), int(input("qual o saldo da conta: ")), limite=5000)
+#         conta1.transfere_para(conta2, int(input("Quanto deseja transferir? \n")))
+#         break
 
-print("O saldo do titular {} é: ".format(conta1.titular), conta1.saldo)
-print("O saldo do titular {} é: ".format(conta2.titular),conta2.saldo)
+# print("O saldo do titular {} é: ".format(conta1.titular), conta1.saldo)
+# print("O saldo do titular {} é: ".format(conta2.titular),conta2.saldo)
